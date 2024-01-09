@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../../s-chistogo-lista-main"
+		},
+		{
+			"path": "../../ono-tebe-nado"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "posmotri_v_okno"
+	}
+}
