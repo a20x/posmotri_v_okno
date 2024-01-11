@@ -42,8 +42,6 @@ ol {
   display: flex;
   flex-direction: row;
   gap: 30px;
-  justify-content: start;
-  align-items: end;
   max-width: 1140px;
 }
 
@@ -53,11 +51,13 @@ ol {
   position: relative;
 }
 
+.result {
+  padding-top: 78px;
+}
+
 .content__details {
   display: flex;
   flex-direction: column;
-  align-items: start;
-  justify-content: start;
   width: auto;
   height: auto;
   gap: 26px;
@@ -66,8 +66,8 @@ ol {
 .result__video-container {
   width: 711px;
   height: 386px;
-  position: relative;
   margin-bottom: 16px;
+  position: relative;
 }
 
 .result__video {
@@ -75,12 +75,8 @@ ol {
   height: 100%;
 }
 
-.content__list-item {
-  padding: 2px;
-}
-
 .content__list-item:not(:last-child) {
-  margin-bottom: 30px;
+  margin-bottom: 33px;
 }
 
 .content__video-card {
@@ -95,12 +91,7 @@ ol {
   max-width: 194px;
   max-height: 103px;
 }
-/*
-.content__video-card-description-container {
-  width: 100%;
-  height: 100%;
-}
-*/
+
 .search-form__fieldset-title {
   font-size: 18px;
   line-height: normal;
@@ -135,13 +126,13 @@ ol {
   font-family: Oswald, sans-serif;
   font-size: 30px;
   font-weight: 700;
-  line-height: normal;            /* Возможно нужно сделать 100% */
+  line-height: 100%;
   text-transform: uppercase;
 }
 
 .content__video-card-description {
   font-weight: 400;
-  line-height: 16.2px;
+  line-height: 90%;
 }
 
 .search-form{
@@ -161,16 +152,7 @@ ol {
   white-space: nowrap;
 }
 
-fieldset {
-  border: none;
-}
-
 .search-form__label {
-/*  display: flex;
-  flex-direction: row;
-  gap: 5px;
-*/
-  display: inline-block;
   width: fit-content;
   cursor: pointer;
 }
@@ -178,15 +160,8 @@ fieldset {
 .search-form__checkbox-list {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 7px;
-  gap: 15px;
-}
-
-.search-form__fieldset-title {
-  line-height: normal;
-  font-weight: 400;
+  margin-bottom: 6.5px;
+  gap: 17px;
 }
 
 .search-form__textfield {
@@ -214,9 +189,7 @@ fieldset {
   color: rgba(255, 255, 255, 0.70);
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 
 .button {
@@ -241,25 +214,7 @@ fieldset {
   width: 390px;
   margin: 2px;
 }
-/*
-.search-form__pseudo-checkbox {
-  cursor: pointer;
-  height: 19px;
-  width: 19px;
-  border: 1px solid #FFF;
-  background-color: inherit;
-  padding: 1px;
-}
 
-input[type='checkbox']:checked + span {
-  background-color: #fff;
-  width: 19px;
-  height: 19px;
-  border: 1px solid #000;
-  padding: 1px;
-  box-shadow: 0 0 0 1px #fff;
-}
-*/
 .search-form__pseudo-checkbox {
   display: inline-block;
   width: 15px;
@@ -267,7 +222,7 @@ input[type='checkbox']:checked + span {
   outline: 1px solid #fff;
   outline-offset: 1px;
   vertical-align: middle;
-  margin-right: 3px;
+  margin-right: 2px;
 }
 
 .search-form__checkbox:checked + span {
@@ -280,43 +235,30 @@ input[type='checkbox']:checked + span {
   font-weight: 400;
 }
 
-
+.search-form__textfield:focus ,
+.button:focus ,
+.content__video-card:focus
+{
+  outline: none;
+}
 
 .search-form__label:has(:focus-visible) {
-  outline: 1px solid #fff;
   outline-offset: 2px;
-}
-
-/*
-.search-form__checkbox[type='checkbox']:focus-visible + span{
-  outline: 1px solid #fff;
-  outline-offset: 2px;
-}
-*/
-/*
-.search-form__label:focus .search-form__pseudo-checkbox,
-.search-form__label:focus .search-form__label-text
-{
-  outline: 1px solid #fff;
-  outline-offset: 2px;
-}
-*/
-.button:focus {
-  outline: none;
 }
 
 .button:focus-visible {
-  outline: 1px solid #fff;
-  outline-offset: 2px;  
+  outline-offset: 1px;
 }
 
 .search-form__label:hover .search-form__label-text ,
-.button:hover {
+.button:hover ,
+.content__video-card:hover .content__video-card-description-container
+{
   text-decoration: underline;
 }
 
+fieldset ,
 .search-form__textfield:active {
-  outline: none;
   border: none;
 }
 
@@ -332,6 +274,9 @@ input[type='checkbox']:checked + span {
   background-color: #545050;
 }
 
-.content__video-card:hover .content__video-card-description-container {
-  text-decoration: underline;
+.search-form__label:has(:focus-visible) ,
+.button:focus-visible ,
+.search-form__textfield:active ,
+.content__video-card:focus-visible {
+  outline: 1px solid #fff;
 }
