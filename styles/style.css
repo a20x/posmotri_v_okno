@@ -227,10 +227,6 @@ ol {
   margin: 2px;
 }
 
-/* .search-form__checkbox:checked + span {
-  background-color: #fff;
-} */
-
 .search-form__pseudo-checkbox::before {
   content: '';
   display: flex;
@@ -245,8 +241,6 @@ ol {
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
   background-color: #fff;
 }
-
-
 
 .search-form__label-text {
   font-size: 18px;
