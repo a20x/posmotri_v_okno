@@ -125,10 +125,6 @@ ol {
   text-decoration: none;
 }
 
-.content__card-link_current {
-  background-color: #545050;
-}
-
 .content__video-card-title {
   font-family: Oswald, sans-serif;
   font-size: 30px;
@@ -278,10 +274,8 @@ fieldset ,
   background-color: #fff;
 }
 
-.button:active {
-  background-color: #545050;
-}
-
+.content__card-link_current ,
+.button:active ,
 .content__list-item:active {
   background-color: #545050;
 }
