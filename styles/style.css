@@ -163,7 +163,6 @@ ol {
   display: flex;
   flex-direction: row;
   gap: 7px;
-  justify-content: center;
   align-items: center;
   width: fit-content;
   cursor: pointer;
@@ -223,7 +222,7 @@ ol {
 }
 
 .more-button {
-  width: 390px;
+  width: 395px;
   margin: 2px;
 }
 
